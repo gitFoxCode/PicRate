@@ -1,0 +1,79 @@
+body {
+  background-color: #111;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+.global-wrapper {
+  width: 100%;
+  height: 100%;
+}
+/********  navigation   ***********/
+.top-nav {
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  padding: 10px 50px;
+}
+.nav-logo {
+  width: 30px;
+  vertical-align: middle;
+}
+.ghome {
+  cursor: pointer;
+}
+.nav-logo-text {
+  display: inline-block;
+  font-size: 16px;
+  color: #fff;
+  padding: 0 10px;
+  font-weight: bold;
+}
+.user-nav-block {
+  display: inline-block;
+  float: right;
+}
+.l-btn {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+.l-btn:hover {
+  text-decoration: underline;
+}
+/******* scroll bar ******/
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #303030;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #313131;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #242424;
+}
+::-webkit-scrollbar-track {
+  background: #1f1f1f;
+  border: 0px none #ffffff;
+  border-radius: 100px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #252525;
+}
+::-webkit-scrollbar-track:active {
+  background: #252525;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
