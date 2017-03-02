@@ -13,12 +13,13 @@ echo '<nav class="top-nav">';
 			</span>
 		</div>
 	</span>
-	<button class="user-nav-block">
-		<div class="user-nav-avatar"></div>
-		<?php if($logged == false) { echo '<a href="login.php" class="l-btn">Zaloguj się</a>'; }else{
-				echo 'FoxCode';
-			} ?>
-	</button>
+	<?php if(!$logged){ echo '<a href="login.php" class="l-btn">Zaloguj się</a>;';}
+	else{
+	echo '<button class="user-nav-block">';
+	echo	'<div class="user-nav-avatar"></div>';
+	echo	'FoxCode';
+	echo '</button>';
+	} ?>
 </nav>
 <?php if(isset($navfix)){
 	echo "";
