@@ -25,17 +25,28 @@
 					<div class="image-im-info red" title="To zdjęcie było obrabiane"></div>
 				</div>
 				<div class="image-info">
+					<div class="rate-user-info">
+						<span class="rate-user-valuename">
+							Autor:
+						</span>
+						<span class="rate-user-author">
+							FoxCode
+						</span>
+					</div>
 					<div class="rate-container">
-						<input type="range" max="10" value="5"> 
+						<input class="rate-range" type="range" max="10" value="5"> 
 					</div>
 					<div class="rate-info">
 						<span class="rate">&#9733;</span>
+						<span class="rate-value">4.23</span>
 					</div>
 				</div>
 			</section>
 			<section class="right-column">
 				<div class="image-desc">
-					<div class="desc"> To zdjęcie robiłem na wyjeździe :) To zdjęcie jest lekko obrabiane :) </div>
+					<div class="desc"> 
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor repudiandae alias iusto quas, animi, ad ab, tempora magni ipsa ducimus molestias quaerat beatae illo recusandae perferendis dolores repellat facilis necessitatibus.
+					</div>
 					<div class="i-container">
 						<div class="i-info-container">
 							<div class="i-name i-orange">Nazwa</div><div class="i-value i-dorange">Wartosc</div>
@@ -46,7 +57,7 @@
 						</div>
 
 						<div class="i-info-container">
-							<div class="i-name i-red i-icon-camera">Miejsce</div><div class="i-value i-dred">Polska</div>
+							<div class="i-name i-red i-icon-place">Miejsce</div><div class="i-value i-dred">Polska</div>
 						</div>
 
 						<div class="i-info-container">
@@ -69,6 +80,10 @@
 		 </main>
 
 </div>
+<script
+  src="https://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>
 <script src="js/root.js"></script>
 </body>
 </html>

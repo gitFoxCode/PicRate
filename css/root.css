@@ -55,6 +55,7 @@ body {
   padding-right: 10px;
   padding-left: 50px;
   transition: all 0.2s;
+  outline: none;
 }
 .user-nav-block:hover{
   background: rgba(0,0,0,0.1);
@@ -68,6 +69,7 @@ body {
   font-size: 16px;
   font-weight: bold;
   line-height: 150%;
+  outline: none;
 }
 .l-btn:hover {
   text-decoration: underline;
@@ -79,7 +81,11 @@ body {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  background: red;
+  background: url(../userdata/avatars/avatar.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 /******* scroll bar ******/
@@ -121,4 +127,85 @@ body {
 }
 .hr{
   margin: 10px 0;
+}
+
+.un-container{
+  position: absolute;
+  z-index: 9999;
+  top:120%;
+  left:-50%;
+  width: 200px;
+  display: none;
+  box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.75);
+}
+.un-container::after{
+  content: "";
+  position: absolute;
+  top: -6%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent #fff transparent;
+}
+.un-container ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.un-container ul a{
+    display: block;
+    width: 100%;
+    background: #fff;
+    padding: 15px 0;
+    text-decoration: none;
+    position: relative;
+    box-sizing: border-box;
+    padding-left: 10%;
+    color: #111;
+}
+/*.un-container ul a:first-child{
+  border-top: 0;
+}
+.un-container ul a:last-child{
+  border-bottom: 0;
+}*/
+.un-container ul a:hover{
+  background: #eee;
+ /* font-weight: bold; */
+}
+.nav-icon{
+  position: absolute;
+  top: 0;
+  left: 5%;
+  width: 35px;
+  background: red;
+  height: 100%;
+}
+.nav-icon-photo{
+  background: url(../icons/photo.png);
+  background-size: 23px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.nav-icon-profile{
+  background: url(../icons/user.png);
+  background-size: 23px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.nav-icon-acc{
+  background: url(../icons/settings.png);
+  background-size: 23px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.nav-icon-logout{
+  background: url(../icons/logout.png);
+  background-size: 23px;
+  background-repeat: no-repeat;
+  background-position: center;
 }

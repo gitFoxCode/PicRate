@@ -1,2 +1,2 @@
 # PicRate
-# Author FoxCode
+ Author FoxCode

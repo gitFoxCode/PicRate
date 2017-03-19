@@ -16,8 +16,18 @@ echo '<nav class="top-nav">';
 	<?php if(!$logged){ echo '<a href="login.php" class="l-btn">Zaloguj się</a>;';}
 	else{
 	echo '<button class="user-nav-block">';
-	echo	'<div class="user-nav-avatar"></div>';
+	echo	'<div class="user-nav-avatar">';
+	// echo 	'<img src="userdata/avatars/avatar.png" alt="" class="nav-avatar">'; // Avatar code here
+	echo '</div>';
 	echo	'FoxCode';
+	echo	'<div class="un-container">';
+	echo	'<ul>';
+	echo		'<a href="#"><li><span class="nav-icon nav-icon-photo"></span>Dodaj zdjęcie</li></a>';
+	echo		'<a href="#"><li><span class="nav-icon nav-icon-profile"></span>Mój profil</li></a>';
+	echo		'<a href="#"><li><span class="nav-icon nav-icon-acc"></span>Ustawienia konta</li></a>';
+	echo		'<a href="#"><li><span class="nav-icon nav-icon-logout"></span>Wyloguj się</li></a>';
+	echo	'</ul>';
+	echo    '</div>';
 	echo '</button>';
 	} ?>
 </nav>
