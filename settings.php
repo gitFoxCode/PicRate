@@ -15,7 +15,7 @@
 
 		<main class="block">
 			<div class="user_banner">
-				<div class="user_avatar">
+				<div class="user_avatar_i">
 				</div>
 			</div>
 			<div class="user_container">
@@ -105,17 +105,91 @@
 						<div class="user_line">
 							<div class="user_btn_container">
 								<button type="button" class="user_btn">
-									Zmień hasło
+									Ukryj dane
 								</button>
 							</div>
 							<div class="user_btn_container">
 								<button type="button" class="user_btn">
-									Nie wysyłaj
+									Zmień E-mail
+								</button>
+							</div>
+						</div>
+
+						<div class="user_line">
+							<div class="user_btn_container">
+								<button type="button" class="user_btn">
+									Ukryj dane
+								</button>
+							</div>
+							<div class="user_btn_container">
+								<button type="button" class="user_btn">
+									Zmień E-mail
 								</button>
 							</div>
 						</div>
 					</div>
 				</div>
+				<section class="section">
+					<h3>Profile społecznościowe</h3>
+					<div class="my_media_container">
+						<div class="my_media my_facebook">
+							johanson123
+						</div>
+						<div class="my_media my_snapchat">
+							johanson123
+						</div>
+						<div class="my_media my_twitter">
+							johanson123
+						</div>
+						<div class="my_media my_print">
+							johanson123
+						</div>
+						<div class="my_media my_tumblr">
+							johanson123
+						</div>
+						<div class="my_media my_web">
+							johanson123
+						</div>
+					</div>
+				<div class="my_media_container">
+					<button type="button" class="editbtn" id="media_edit">Edytuuj</button>
+				</div>
+					<div class="media_edit">
+						<form action="action/change_media.php">
+							<div class="media_container">
+								<div class="media_input_container">
+									<div class="media_icon fb_icon"></div>
+									<input type="text" class="fb_input media_input" placeholder="np. facebook.com/Jan.Kowalski1">
+								</div>
+								<div class="media_input_container">
+									<div class="media_icon snap_icon"></div>
+									<input type="text" class="snap_input media_input" placeholder="np. jankowal123">
+								</div>
+								<div class="media_input_container">
+									<div class="media_icon print_icon"></div>
+									<input type="text" class="print_input media_input" placeholder="np. pinterest.com/kowalski">
+								</div>
+							</div>
+							<div class="media_container">
+								<div class="media_input_container m10">
+									<div class="media_icon tumblr_icon"></div>
+									<input type="text" class="tumblr_input media_input" placeholder="np. tumblr.com/jank123">
+								</div>
+								<div class="media_input_container m10">
+									<div class="media_icon web_icon"></div>
+									<input type="text" class="web_input media_input" placeholder="Link do Twojej strony">
+								</div>
+								<div class="media_input_container m10">
+									<div class="media_icon twitter_icon"></div>
+									<input type="text" class="twitter_input media_input" placeholder="np. twitter.com/jank123">
+								</div>
+							</div>
+						<div class="my_media_container">
+							<button type="submit" class="savebtn" id="media_save">Zapisz</button>
+						</div>
+					</form>
+					</div>
+				</section>
 				<div class="user_stats_container">
 					<h3>Statystyki</h3>
 
@@ -177,5 +251,6 @@
 	</div>
 </div>
 <script src="js/root.js"></script>
+<script src="js/settings.js"></script>
 </body>
 </html>

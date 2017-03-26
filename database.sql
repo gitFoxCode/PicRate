@@ -9,6 +9,12 @@ Users:
 	Images_count: var
 	Avatar: userdata/avatars/php_url
 	Admin: true/false
+	fb: link
+	twitter: link
+	snap: link
+	print: link
+	tumb: link
+	web: link
 
 Photos:
 *	id: INT AI
@@ -16,6 +22,9 @@ Photos:
 	url: userdata/photos/php_url
 	Data: xxxx-yy-zz GG-MM-SS
 	Rate: INT
+	stop: 0/1
+	download: true/false
+	changed: true/false
 
 Comments:
 *	id: INT AI
@@ -23,6 +32,7 @@ Comments:
 	Photo: Photos->id
 	Comment: varchar
 	Data: xxxx-yy-zz GG-MM-SS
+	stop: 0/1
 
 Banned: 
 *	id: INT AI

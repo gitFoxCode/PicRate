@@ -217,6 +217,12 @@ main{
 	border-bottom-right-radius: 5px;
 	border-bottom-left-radius: 5px;
 }
+.showimg{
+	position: fixed;
+	top: 0; left: 0; bottom: 0; right: 0;
+	width: 100wh;
+	height: 100vh;
+}
 .rate-submit-container{
 	position: absolute;
 	width: 100%;
@@ -357,9 +363,23 @@ input[type="submit"]:disabled:hover{
 	background-size: cover;
 	background-repeat: no-repeat;
 	border-radius: 50%;
+}
+.user_avatar_i{
+	position: absolute;
+	top:0;
+	left:50%;
+	transform: translateX(-50%);
+	height: 250px;
+	width: 250px;
+	background: red;
+	background: url(../userdata/avatars/avatar.png);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 50%;
 	cursor: pointer;
 }
-.user_avatar::after{
+.user_avatar_i::after{
 	content: "Zmień Avatar";
 	display: flex;
 	align-items: center; 
@@ -374,7 +394,7 @@ input[type="submit"]:disabled:hover{
 	opacity: 0;
 	transition: 0.4s;
 }
-.user_avatar:hover::after{
+.user_avatar_i:hover::after{
 	opacity: 1;
 }
 
@@ -729,4 +749,373 @@ background-color: linear-gradient(to right, rgba(235,56,95,1) 0%, rgba(252,104,1
 	background-color:rgba(255,255,255,.8);
 	box-shadow:inset rgba(255,255,255,.5)0 0 25px;
 	transition: all 0s;
+}
+.section{
+	width: 100%;
+	position: relative;
+	margin: 20px;
+	padding-top: 10px;
+}
+.section h1,.section h2,.section h3,.section h4,.section h5,.section h6{
+	margin-top: 0;
+	color: #333;
+}
+.section::after{
+	content: "";
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	height: 2px;
+	background: #555;
+}
+.achivement_blocks{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.achivement_img_container{
+	position: relative;
+	text-align: center;
+	margin: 5px;
+	transition: all 0.2s;
+}
+.achivement_img_container:hover{
+	transition: all 0.4s;
+	transform: scale(1.2);
+}
+
+.achivement_img_container img{
+	width: 150px;
+	height: 150px;
+}
+.achivement_desc{
+	font-weight: bold;
+	padding: 5px;
+	width: 140px;
+	background: #eee;
+}
+.fb .user_info_name{
+	background: #3B5998;
+}
+.fb .user_info_value{
+	background: #4b71c1;
+}
+.snap .user_info_name{
+	background: #FFFC00;
+	color: #555;
+}
+.snap .user_info_value{
+	background: #fffc72;
+	color: #333;
+}
+.web .user_info_name{
+	background: #21759B;
+}
+.web .user_info_value{
+	background: #2fa4d8;
+}
+.pinterest .user_info_name{
+	background: #BD081C;
+}
+.pinterest .user_info_value{
+	background: #ea2c41;
+}
+.twitter .user_info_name{
+	background: #1DA1F2;
+}
+.twitter .user_info_value{
+	background: #5ec1ff;
+}
+.tumbrl .user_info_name{
+	background: #36465D;
+}
+.tumbrl .user_info_value{
+	background: #587399;
+}
+.media_container{
+	display: flex;
+	flex-wrap: wrap;
+		justify-content: space-around;
+}
+.media_input_container{
+	display: flex;
+}
+.media_input{
+	background: #aaa;
+	box-sizing: border-box;
+	border: 2px solid red;
+	font-size: 14px;
+	height: 30px;
+	width: 230px;
+	outline: none;
+	text-indent: 5px;
+	border-left: none;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	margin-right: 20px;
+	color: #ebebeb;
+}
+.media_icon{
+	display: inline-block;
+	background: blue;
+	width: 30px;
+	height: 30px;
+}
+.fb_input{
+	background: #4a70bf;
+	border: #314b82;
+}
+.print_input{
+	background: #f7112a;
+	border: #BD081C;
+}
+.print_icon{
+	background: url(../icons/pinterest.svg);
+	background-size: 60%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: #BD081C;
+}
+.fb_icon{
+	background: url(../icons/facebook.svg);
+	background-size: 60%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: #3B5998;
+}
+.snap_input{
+	background: #fffd8e;
+	border-color: #FFFC00;
+	color: #333;
+}
+.snap_icon{
+	background: url(../icons/snapchat.svg);
+	background-size: 60%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: #FFFC00;
+}
+.twitter_input{
+	background: #54beff;
+	border-color: #1DA1F2;
+}
+.twitter_icon{
+	background: url(../icons/twitter.svg);
+	background-size: 60%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: #1DA1F2;
+}
+.web_input{
+	background: #f2423c;
+	border-color: #e5221b;
+}
+.web_icon{
+	background: url(../icons/web.svg);
+	background-size: 60%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: #e5221b;
+}
+.tumblr_input{
+	background: #587399;
+	border-color: #36465D;
+}
+.tumblr_icon{
+	background: url(../icons/tumblr.svg);
+	background-size: 60%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: #36465D;
+}
+.m10{
+	margin: 10px 0px;
+}
+.media_edit{
+	display: none;
+}
+.my_media_container{
+	display: flex;
+	justify-content: center;
+}
+.my_media{
+	margin: 10px;
+	padding: 10px;
+	background: gray;
+	padding-left: 40px;
+	border-radius: 25px;
+	color: #ebebeb;
+}
+.my_facebook{
+	background: #3B5998;
+	position: relative;
+}
+.my_facebook:after{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 45px;
+	height: 37px;
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
+	background: url(../icons/facebook.svg);
+	background-position: center;
+	background-size: 40%;
+	background-repeat: no-repeat;
+}
+.my_snapchat{
+	background: #FFFC00;
+	position: relative;
+}
+.my_snapchat:after{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 45px;
+	height: 37px;
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
+	background: url(../icons/snapchat.svg);
+	background-position: center;
+	background-size: 40%;
+	background-repeat: no-repeat;
+}
+.my_twitter{
+	background: #1DA1F2;
+	position: relative;
+}
+.my_twitter:after{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 45px;
+	height: 37px;
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
+	background: url(../icons/twitter.svg);
+	background-position: center;
+	background-size: 40%;
+	background-repeat: no-repeat;
+}
+.my_tumblr{
+	background: #36465D;
+	position: relative;
+}
+.my_tumblr:after{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 45px;
+	height: 37px;
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
+	background: url(../icons/tumblr.svg);
+	background-position: center;
+	background-size: 40%;
+	background-repeat: no-repeat;
+}
+.my_print{
+	background: #BD081C;
+	position: relative;
+}
+.my_print:after{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 45px;
+	height: 37px;
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
+	background: url(../icons/Pinterest.svg);
+	background-position: center;
+	background-size: 40%;
+	background-repeat: no-repeat;
+}
+.my_web{
+	background: #1a9b5d;
+	position: relative;
+}
+.my_web:after{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 45px;
+	height: 37px;
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
+	background: url(../icons/web.svg);
+	background-position: center;
+	background-size: 40%;
+	background-repeat: no-repeat;
+}
+.editbtn{
+	margin: 10px 0;
+	padding: 10px;
+	border-radius: 25px;
+	border: 1px solid #ff9400;
+	background-color: #ffa528;
+	color: #333;
+	font-weight: bold;
+	padding-left: 35px;
+	padding-right: 15px;
+	position: relative;
+	outline: none;
+	cursor: pointer;
+	transition: all 0.4s;
+}
+.editbtn:hover{
+	background-color: #ff9400;
+}
+.editbtn:after{
+	content: "";
+	position: absolute;
+	left: 5px;
+	top: 0;
+	width: 35%;
+	height: 100%;
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
+	background: url(../icons/edit_black.png);
+	background-position: center;
+	background-size: 40%;
+	background-repeat: no-repeat;
+}
+.savebtn{
+	margin: 10px 0;
+	padding: 10px;
+	border-radius: 25px;
+	border: 1px solid #0ea530;
+	background-color: #12d13c;
+	color: #ebebeb;
+	font-weight: bold;
+	padding-left: 35px;
+	padding-right: 15px;
+	position: relative;
+	outline: none;
+	cursor: pointer;
+	transition: all 0.4s;
+}
+.savebtn:hover{
+	background-color: #0ea530;
+}
+.savebtn:after{
+	content: "";
+	position: absolute;
+	left: 5px;
+	top: 0;
+	width: 35%;
+	height: 100%;
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
+	background: url(../icons/save.png);
+	background-position: center;
+	background-size: 40%;
+	background-repeat: no-repeat;
 }
