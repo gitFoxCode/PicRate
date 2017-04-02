@@ -15,6 +15,7 @@
 
 		<main class="block">
 			<div class="user_banner">
+				<div class="user_header editicon"> Ustawienia </div>
 				<div class="user_avatar_i">
 				</div>
 			</div>
@@ -250,7 +251,8 @@
 
 	</div>
 </div>
-<script src="js/root.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
 <script src="js/settings.js"></script>
+<script src="js/root.js"></script>
 </body>
 </html>

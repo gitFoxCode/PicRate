@@ -82,6 +82,15 @@ main{
 	opacity: 1;
 	visibility: visible;
 }
+.image-max-box{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0,0,0,0.4);
+	top: 0;
+	left: 0;
+	z-index: 99;
+}
 .image-image{
 	position: absolute;
 	max-width: 100%;
@@ -89,6 +98,20 @@ main{
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+.image-max{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.max-close{
+	position: fixed;
+	bottom: 10px;
+	right: 20px;
+	z-index: 9999;
+	cursor: pointer;
 }
 .image-image-background{
 	position: absolute;
@@ -108,7 +131,7 @@ main{
 	width: 100%;
 	min-height: 200px;
 	height: 400px;
-	background: #d9d9d9;
+	background: #ededed;
 	border-radius: 5px;
 }
 .i-name{
@@ -314,32 +337,32 @@ input[type="submit"]:disabled:hover{
 	transform: translateY(-55%);
 	width: 450px;
 	height: 20px;
-	background: #111;
 	appearance: none;
 	-webkit-appearance: none;
 	overflow:hidden;
 	outline: none;
-	color: rgba(253, 142, 0, 0.75);
 	z-index: 0;
 	background: #eee;
 	border-radius: 20px;
+	color: rgba(213, 142, 0, 0.75);
+	background: url(../img/range.png);
+	background-position: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
 }
 .rate-range:hover{
-	cursor: ew-resize;
+	cursor: pointer;
 }
 .rate-range::-webkit-slider-thumb {
 	position:relative;
    -webkit-appearance: none; 
-    cursor:pointer;
-    background-color: rgba(253, 142, 0, 0.80);
-    width: 10px;
+    cursor: pointer;
+    /* background-color: rgba(250, 142, 0, 0.80); */
+    width: 0px;
     height: 20px;
-
-      box-shadow: -230px 0 0 230px;
-
+    box-shadow: -230px 0 0 230px;
     z-index: 0;
 	transition: all 2s;
-	color: orange;
 }
 .rate-range::-webkit-slider-thumb:hover{
 	cursor: pointer;
@@ -622,6 +645,40 @@ background-color: linear-gradient(to right, rgba(235,56,95,1) 0%, rgba(252,104,1
 	height: 100%;
 	width: 35px;
 	background: url(../icons/edit.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 40%;
+}
+.user_header{
+	position: absolute;
+	left: 5px;
+	top: 10px;
+	padding-left: 35px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #ddd;
+	letter-spacing: 0.5px;
+}
+.editicon::after{
+	content:"";
+	position: absolute;
+	left: 3;
+	top:0;
+	height: 100%;
+	width: 35px;
+	background: url(../icons/edit.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 40%;
+}
+.profileicon::after{
+	content:"";
+	position: absolute;
+	left: 3;
+	top:0;
+	height: 100%;
+	width: 35px;
+	background: url(../icons/profile.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 40%;

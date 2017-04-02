@@ -15,6 +15,7 @@
 
 		<main class="block">
 			<div class="user_banner">
+				<div class="user_header profileicon"> Twój profil </div>
 				<div class="user_avatar">
 				</div>
 			</div>
@@ -215,6 +216,7 @@
 
 	</div>
 </div>
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
 <script src="js/root.js"></script>
 </body>
 </html>

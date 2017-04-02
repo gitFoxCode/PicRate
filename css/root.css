@@ -59,6 +59,7 @@ body {
 }
 .user-nav-block:hover{
   background: rgba(0,0,0,0.1);
+  cursor: pointer;
 }
 .l-btn {
   position: absolute;

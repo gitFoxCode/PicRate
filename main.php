@@ -1,4 +1,4 @@
-<?php $logged = true;
+<?php if(isset($_GET['anon'])) { $logged = false; } else { $logged = true; }
 	  $cnav = true;?>
 <html>
 <head>
@@ -9,6 +9,14 @@
 	<link rel="stylesheet" href="css/global.css">
 </head>
 <body>
+<!-- <div class="image-max-box">
+	<img src="img/randomnumber.jpg" class="image-image">
+	<div class="max-close">
+		<span title="Wyjdz z trybu powiększenia">
+			<img src="icons/minimalize.png" alt="[ /^]" class="image-options-icon">
+		</span>
+	</div>
+</div> -->
 <div class="global-wrapper">
 		<?php include('nav.php') ?>
 
@@ -80,10 +88,8 @@
 		 </main>
 
 </div>
-<script
-  src="https://code.jquery.com/jquery-3.1.1.js"
-  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
-  crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
 <script src="js/root.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

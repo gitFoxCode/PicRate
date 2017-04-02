@@ -1,5 +1,6 @@
 (function() {  
 
+
 	//// homepage ////
 document.querySelector('.ghome').addEventListener("click", goToHome, false);
 

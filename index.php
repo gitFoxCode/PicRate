@@ -27,7 +27,7 @@
 					</button>
 				</a>
 
-				<a href="#main">
+				<a href="main.php?anon=true">
 					<button type="button" class="btn main-annonimous">
 						Oceniaj anonimowo
 					</button>
