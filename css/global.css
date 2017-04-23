@@ -163,13 +163,12 @@ main{
 	border-radius: 5px;
 	margin: 0 auto;
 	margin-top: 1%;
-	padding: 5px;
 	width: 95%;
 	max-height: 140px;
-	background-color: #3ca5dc;
+	background-color: #1A2D33;
 	color: #e8e8e8;
-	padding-top: 5%;
-	padding-bottom: 5%;
+    box-sizing: border-box;
+    padding: 5% 20px;
 }
 .i-blue{
 	background: #2688c7;
@@ -381,10 +380,10 @@ input[type="submit"]:disabled:hover{
 	height: 250px;
 	width: 250px;
 	background: red;
-	background: url(../userdata/avatars/avatar.png);
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
+	/*background: url(../userdata/avatars/avatar.png);*/
+	background-position: center !important;
+	background-size: cover !important;
+	background-repeat: no-repeat !important;
 	border-radius: 50%;
 }
 .user_avatar_i{
@@ -395,11 +394,11 @@ input[type="submit"]:disabled:hover{
 	height: 250px;
 	width: 250px;
 	background: red;
-	background: url(../userdata/avatars/avatar.png);
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	border-radius: 50%;
+	/*background: url(../userdata/avatars/avatar.png); */
+	background-position: center !important;
+	background-size: cover !important;
+	background-repeat: no-repeat !important;
+	border-radius: 50% !important;
 	cursor: pointer;
 }
 .user_avatar_i::after{
@@ -1175,4 +1174,17 @@ background-color: linear-gradient(to right, rgba(235,56,95,1) 0%, rgba(252,104,1
 	background-position: center;
 	background-size: 40%;
 	background-repeat: no-repeat;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #999;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #999;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #999;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #999;
 }

@@ -23,7 +23,7 @@ body {
   justify-content: space-between; 
   align-items: center;
   padding: 0 5%;
-  z-index: 15;
+  z-index: 3;
 }
 .cnav{
   /* background: orange; */
@@ -82,10 +82,10 @@ body {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  background: url(../userdata/avatars/avatar.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  /* background: url(../userdata/avatars/avatar.png); */
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
   overflow: hidden;
 }
 

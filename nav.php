@@ -1,4 +1,15 @@
 <?php
+	session_start(); //
+
+	// roboczo:
+	if(isset($_SESSION['user'])){
+	$user_username = $_SESSION['user'];
+	}
+	else{
+		$user_username = "usertest";
+	};
+
+
 if($cnav){
 	echo '<nav class="top-nav cnav">';
 }
@@ -13,13 +24,13 @@ echo '<nav class="top-nav">';
 			</span>
 		</div>
 	</span>
-	<?php if(!$logged){ echo '<a href="login.php" class="l-btn">Zaloguj się</a>;';}
+	<?php if(!isset($_SESSION['id'])){ echo '<a href="login.php" class="l-btn">Zaloguj się</a>;';}
 	else{
 	echo '<button class="user-nav-block">';
-	echo	'<div class="user-nav-avatar">';
+	echo	'<div class="user-nav-avatar" style="background: url(' . $_SESSION['avatar'] . ');">';
 	// echo 	'<img src="userdata/avatars/avatar.png" alt="" class="nav-avatar">'; // Avatar code here
 	echo '</div>';
-	echo	'FoxCode';
+	echo $user_username;
 	echo	'<div class="un-container">';
 	echo	'<ul>';
 	echo		'<a href="upload.php"><li><span class="nav-icon nav-icon-photo"></span>Dodaj zdjęcie</li></a>';

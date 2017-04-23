@@ -16,13 +16,13 @@
 		<main class="block">
 			<div class="user_banner">
 				<div class="user_header editicon"> Ustawienia </div>
-				<div class="user_avatar_i">
+				<div class="user_avatar_i" <?php echo 'style="background: url('.$_SESSION['avatar'].')"' ?> >
 				</div>
 			</div>
 			<div class="user_container">
 				<div class="user_username">
-					<span class="user_username_header">FoxCode</span>
-					<span class="user_username_rank">Użytkownik</span>
+					<span class="user_username_header"> <?php echo $_SESSION['user'] ?> </span>
+					<span class="user_username_rank"> <?php if($_SESSION['admin'] > 0){ echo "Administrator";}else{echo "Użytkownik";}?> </span>
 				</div>
 			</div>
 			<div class="user_content">
@@ -35,7 +35,7 @@
 									Zdjęcia
 								</div>
 								<div class="user_info_value">
-									10
+									<?php echo $_SESSION['img_count'] ?>
 								</div>
 							</div>
 
@@ -55,7 +55,7 @@
 									E-mail
 								</div>
 								<div class="user_info_value">
-									foxcode@dsp.pl
+									<?php echo $_SESSION['email'] ?>
 								</div>
 							</div>
 
@@ -75,7 +75,7 @@
 									Data założenia
 								</div>
 								<div class="user_info_value">
-									2017-03-16
+									<?php echo $_SESSION['data'] ?>
 								</div>
 							</div>
 
@@ -134,59 +134,83 @@
 					<h3>Profile społecznościowe</h3>
 					<div class="my_media_container">
 						<div class="my_media my_facebook">
-							johanson123
+							<?php if($_SESSION['fb'] == 'null'){
+											echo "<b>BRAK</b>";
+											}else{
+											echo $_SESSION['fb'];
+												} ?>
 						</div>
 						<div class="my_media my_snapchat">
-							johanson123
+							<?php if($_SESSION['snap'] == 'null'){
+											echo "<b>BRAK</b>";
+											}else{
+											echo $_SESSION['snap'];
+												} ?>
 						</div>
 						<div class="my_media my_twitter">
-							johanson123
+							<?php if($_SESSION['twitter'] == 'null'){
+											echo "<b>BRAK</b>";
+											}else{
+											echo $_SESSION['twitter'];
+												} ?>
 						</div>
 						<div class="my_media my_print">
-							johanson123
+							<?php if($_SESSION['print'] == 'null'){
+											echo "<b>BRAK</b>";
+											}else{
+											echo $_SESSION['print'];
+												} ?>
 						</div>
 						<div class="my_media my_tumblr">
-							johanson123
+							<?php if($_SESSION['tumb'] == 'null'){
+											echo "<b>BRAK</b>";
+											}else{
+											echo $_SESSION['tumb'];
+												} ?>
 						</div>
 						<div class="my_media my_web">
-							johanson123
+							<?php if($_SESSION['web'] == 'null'){
+											echo "<b>BRAK</b>";
+											}else{
+											echo $_SESSION['web'];
+												} ?>
 						</div>
 					</div>
 				<div class="my_media_container">
 					<button type="button" class="editbtn" id="media_edit">Edytuuj</button>
 				</div>
 					<div class="media_edit">
-						<form action="action/change_media.php">
+						<form action="action/change_media.php" method="POST">
 							<div class="media_container">
 								<div class="media_input_container">
 									<div class="media_icon fb_icon"></div>
-									<input type="text" class="fb_input media_input" placeholder="np. facebook.com/Jan.Kowalski1">
+									<input type="text" class="fb_input media_input" placeholder="np. facebook.com/Jan.Kowalski1" name="fb">
 								</div>
 								<div class="media_input_container">
 									<div class="media_icon snap_icon"></div>
-									<input type="text" class="snap_input media_input" placeholder="np. jankowal123">
+									<input type="text" class="snap_input media_input" placeholder="np. jankowal123" name="snap">
 								</div>
 								<div class="media_input_container">
 									<div class="media_icon print_icon"></div>
-									<input type="text" class="print_input media_input" placeholder="np. pinterest.com/kowalski">
+									<input type="text" class="print_input media_input" placeholder="np. pinterest.com/kowalski" name="print">
 								</div>
 							</div>
 							<div class="media_container">
 								<div class="media_input_container m10">
 									<div class="media_icon tumblr_icon"></div>
-									<input type="text" class="tumblr_input media_input" placeholder="np. tumblr.com/jank123">
+									<input type="text" class="tumblr_input media_input" placeholder="np. tumblr.com/jank123" name="tumb">
 								</div>
 								<div class="media_input_container m10">
 									<div class="media_icon web_icon"></div>
-									<input type="text" class="web_input media_input" placeholder="Link do Twojej strony">
+									<input type="text" class="web_input media_input" placeholder="Link do Twojej strony" name="web">
 								</div>
 								<div class="media_input_container m10">
 									<div class="media_icon twitter_icon"></div>
-									<input type="text" class="twitter_input media_input" placeholder="np. twitter.com/jank123">
+									<input type="text" class="twitter_input media_input" placeholder="np. twitter.com/jank123" name="twitter">
 								</div>
 							</div>
 						<div class="my_media_container">
-							<button type="submit" class="savebtn" id="media_save">Zapisz</button>
+							<button type="submit" name="submit" class="savebtn" id="media_save">Zapisz</button>
 						</div>
 					</form>
 					</div>

@@ -1,4 +1,5 @@
-<?php if(isset($_GET['anon'])) { $logged = false; } else { $logged = true; }
+<?php 
+	if(isset($_GET['anon'])) { $logged = false; } else { $logged = true; }
 	  $cnav = true;?>
 <html>
 <head>
@@ -18,7 +19,11 @@
 	</div>
 </div> -->
 <div class="global-wrapper">
-		<?php include('nav.php') ?>
+		<?php include('nav.php');
+
+		unset($_SESSION['e']);
+		?>
+
 
 		<main>
 			<section class="left-column">
@@ -79,9 +84,9 @@
 					</div>
 					<div class="rate-submit-container">
 						<div class="rate-textrate">
-							<div class="rate-textrate-name rate-color-d">Twoja ocena:</div><div class="rate-textrate-value rate-color">Średnio</div>
+							<div class="rate-textrate-name rate-color-d">Twoja ocena:</div><div class="rate-textrate-value rate-color">(5) Średnio</div>
 						</div>
-						<input type="submit" name="rate-submit" class="rate-submit-btn" value="Wyślij ocene" >
+						<input type="submit" name="rate-submit" class="rate-submit-btn" value="&#9733; Wyślij ocene &#9733;" >
 					</div>
 				</div>
 			</section>

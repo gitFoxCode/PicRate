@@ -24,6 +24,7 @@ Photos:
 	Rate: INT
 	stop: 0/1
 	download: true/false
+	comment: true/false
 	changed: true/false
 
 Comments:

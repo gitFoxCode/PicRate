@@ -90,3 +90,67 @@ h1 {
 .reg h1 {
   margin: 0;
 }
+.register-error{
+  color: #292b2c;
+  padding: 5px;
+  border: 1px solid #dddddd;
+  padding-left: 10px;
+  border-left: 7px solid #e53935;
+  border-radius: 10px;
+  background-color: #fcfcfc;
+}
+.register-success{
+  color: #292b2c;
+  padding: 5px;
+  border: 1px solid #dddddd;
+  padding-left: 10px;
+  border-left: 7px solid #74F30B;
+  border-radius: 10px;
+  background-color: #fcfcfc;
+}
+.register-success b{
+  color: #71AF51;
+}
+.register-error b{
+  color: #b52b28;
+}
+.nextstep{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fefefe;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  z-index: 10;
+  text-align: center;
+  color: #222;
+  box-shadow: 0px 0px 54px 10px rgba(0,0,0,0.75);
+  display: none;
+}
+.closestep{
+  position: absolute;
+  right: 5px;
+  top: -5px;
+  font-size: 2em;
+  cursor: pointer;
+}
+.nextstep h1{
+  padding: 20px;
+  padding-top: 10px;
+}
+.recapthatest{
+  width: 350px;
+  height: 70px;
+  background: #eee;
+  text-align: center;
+  color: #ccc;
+}
+.error-lv2{
+  padding: 5px 20px;
+  background: #f22;
+  font-weight: bold;
+  color: #ebebeb;
+  margin-top: 5px;
+}

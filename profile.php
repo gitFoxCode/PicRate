@@ -16,13 +16,13 @@
 		<main class="block">
 			<div class="user_banner">
 				<div class="user_header profileicon"> Twój profil </div>
-				<div class="user_avatar">
+				<div class="user_avatar" <?php echo 'style="background: url('.$_SESSION['avatar'].')"' ?> >
 				</div>
 			</div>
 			<div class="user_container">
 				<div class="user_username">
-					<span class="user_username_header">FoxCode</span>
-					<span class="user_username_rank">Użytkownik</span>
+					<span class="user_username_header"> <?php echo $_SESSION['user'] ?> </span>
+					<span class="user_username_rank"> <?php if($_SESSION['admin'] > 0){ echo "Administrator";}else{echo "Użytkownik";}?> </span>
 				</div>
 			</div>
 			<div class="user_content">
@@ -35,7 +35,7 @@
 									Zdjęcia
 								</div>
 								<div class="user_info_value">
-									10
+									<?php echo $_SESSION['img_count'] ?>
 								</div>
 							</div>
 
@@ -64,7 +64,7 @@
 									Achivementy
 								</div>
 								<div class="user_info_value">
-									7
+									0
 								</div>
 							</div>						
 						</div>
@@ -75,7 +75,7 @@
 									Data założenia
 								</div>
 								<div class="user_info_value">
-									2017-03-16
+									<?php echo $_SESSION['data'] // To fix (Y-M-d)?>
 								</div>
 							</div>
 
@@ -97,7 +97,11 @@
 								</div>
 								<a href="http://facebook.com/">
 									<div class="user_info_value">
-										/foxcrush
+										<?php if($_SESSION['fb'] == 'null'){
+											echo "<b>BRAK</b>";
+											}else{
+											echo $_SESSION['fb'];
+												} ?>
 									</div>
 								</a>
 							</div>
@@ -108,7 +112,11 @@
 								</div>
 								<a href="#">
 									<div class="user_info_value">
-										foxcrush
+									<?php if($_SESSION['snap'] == 'null'){
+										echo "<b>BRAK</b>";
+									}else{
+										echo $_SESSION['snap'];
+									} ?>
 									</div>
 								</a>
 							</div>
@@ -121,7 +129,11 @@
 								</div>
 								<a href="http://pinterest.com">
 									<div class="user_info_value">
-										foxprin
+									<?php if($_SESSION['print'] == 'null'){
+										echo "<b>BRAK</b>";
+									}else{
+										echo $_SESSION['print'];
+									} ?>
 									</div>
 								</a>
 							</div>
@@ -132,7 +144,11 @@
 								</div>
 								<a href="http://twitter.com">
 									<div class="user_info_value">
-										Fox
+									<?php if($_SESSION['twitter'] == 'null'){
+										echo "<b>BRAK</b>";
+									}else{
+										echo $_SESSION['twitter'];
+									} ?>
 									</div>
 								</a>
 							</div>						
@@ -145,7 +161,11 @@
 								</div>
 								<a href="http://tumbrl.com">
 									<div class="user_info_value">
-										foxcode
+									<?php if($_SESSION['tumb'] == 'null'){
+										echo "<b>BRAK</b>";
+									}else{
+										echo $_SESSION['tumb'];
+									} ?>
 									</div>
 								</a>
 							</div>
@@ -154,9 +174,17 @@
 								<div class="user_info_name">
 									Strona WWW
 								</div>
-								<a href="http://website.com">
+								<a <?php 
+								if($_SESSION['web'] == 'null')
+									{echo 'href="#"';}
+								else{ echo 'href="'.$_SESSION['web'].'"';}
+								 ?>">
 									<div class="user_info_value">
-										Kliknij
+									<?php if($_SESSION['web'] == 'null'){
+										echo "<b>BRAK</b>";
+									}else{
+										echo "<b> KLIKNIJ </b>";
+									} ?>
 									</div>
 								</a>
 							</div>					
@@ -168,44 +196,44 @@
 					<div class="achivement_blocks">
 						<div class="achivement_img_container">
 							<div class="achivement_img">
-								<img src="img/achivements/add5.png">
+								<img src="img/achivements/disable.png">
 							</div>
-							<div class="achivement_desc">Dodaj 5 zdjęć!</div>
+							<div class="achivement_desc">Achivementy niedostępne</div>
 						</div>
 
 						<div class="achivement_img_container">
 							<div class="achivement_img">
-								<img src="img/achivements/add5.png">
+								<img src="img/achivements/disable.png">
 							</div>
-							<div class="achivement_desc">Dodaj 5 zdjęć!</div>
+							<div class="achivement_desc">Achivementy niedostępne</div>
 						</div>
 
 						<div class="achivement_img_container">
 							<div class="achivement_img">
-								<img src="img/achivements/add5.png">
+								<img src="img/achivements/disable.png">
 							</div>
-							<div class="achivement_desc">Dodaj 5 zdjęć!</div>
+							<div class="achivement_desc">Achivementy niedostępne</div>
 						</div>
 
 						<div class="achivement_img_container">
 							<div class="achivement_img">
-								<img src="img/achivements/add5.png">
+								<img src="img/achivements/disable.png">
 							</div>
-							<div class="achivement_desc">Dodaj 5 zdjęć!</div>
+							<div class="achivement_desc">Achivementy niedostępne</div>
 						</div>
 
 						<div class="achivement_img_container">
 							<div class="achivement_img">
-								<img src="img/achivements/add5.png">
+								<img src="img/achivements/disable.png">
 							</div>
-							<div class="achivement_desc">Dodaj 5 zdjęć!</div>
+							<div class="achivement_desc">Achivementy niedostępne</div>
 						</div>
 
 						<div class="achivement_img_container">
 							<div class="achivement_img">
-								<img src="img/achivements/add5.png">
+								<img src="img/achivements/disable.png">
 							</div>
-							<div class="achivement_desc">Dodaj 5 zdjęć!</div>
+							<div class="achivement_desc">Achivementy niedostępne</div>
 						</div>
 
 					</div>

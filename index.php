@@ -1,4 +1,4 @@
-<?php $logged = false;
+<?php
 	$cnav = false;
 	?>
 <html>
@@ -13,6 +13,11 @@
 <div class="global-wrapper">
 	<div class="first-page">
 		<?php include('nav.php') ?>
+		<?php
+		if(isset($_SESSION['id'])){
+			header("location: main.php");
+			exit;
+		} ?>
 		<main>
 			<img class="logo" src="img/logo.png" alt="PicRate.com">
 			<h1 class="title"><b>Pic</b>Rate</h1>
